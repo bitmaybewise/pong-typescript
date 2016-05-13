@@ -131,7 +131,7 @@ function drawEndGame(gameOverHTML: HTMLElement, isOver: boolean): void {
   }
 }
 
-function loop(playgroundHTML, racketHTML, ballHTML, scoreHTML, GameOverHTML) {
+function loop(playgroundHTML: HTMLElement, racketHTML: HTMLElement, ballHTML: HTMLElement, scoreHTML: HTMLElement, gameOverHTML: HTMLElement): void {
   if (pong.isRunning()) {
     let ball = pong.ball, score = pong.score;
     let newDirX  = moveBallDirectionX(playgroundHTML, ball);
@@ -149,7 +149,7 @@ function loop(playgroundHTML, racketHTML, ballHTML, scoreHTML, GameOverHTML) {
     drawScore(scoreHTML, pong.score);
     let isOver = isGameOver(racketHTML, ballHTML, ball);
     endGame(pong, isOver);
-    drawEndGame(GameOverHTML, isOver);
+    drawEndGame(gameOverHTML, isOver);
   }
 }
 

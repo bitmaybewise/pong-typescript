@@ -127,7 +127,7 @@ function drawEndGame(gameOverHTML, isOver) {
         gameOverHTML.style.display = 'block';
     }
 }
-function loop(playgroundHTML, racketHTML, ballHTML, scoreHTML, GameOverHTML) {
+function loop(playgroundHTML, racketHTML, ballHTML, scoreHTML, gameOverHTML) {
     if (pong.isRunning()) {
         var ball = pong.ball, score = pong.score;
         var newDirX = moveBallDirectionX(playgroundHTML, ball);
@@ -145,7 +145,7 @@ function loop(playgroundHTML, racketHTML, ballHTML, scoreHTML, GameOverHTML) {
         drawScore(scoreHTML, pong.score);
         var isOver = isGameOver(racketHTML, ballHTML, ball);
         endGame(pong, isOver);
-        drawEndGame(GameOverHTML, isOver);
+        drawEndGame(gameOverHTML, isOver);
     }
 }
 function load() {
